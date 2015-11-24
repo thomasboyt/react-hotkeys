@@ -2,7 +2,7 @@
   "name": "react-hotkeys",
   "version": "0.7.0",
   "description": "A declarative library for handling hotkeys and focus within a React application",
-  "main": "lib",
+  "main": "build/npm",
   "directories": {
     "doc": "docs"
   },
