@@ -125,9 +125,13 @@ var HotKeys = _react2['default'].createClass({
 
     // Ensure map is up-to-date to begin with
     // We will only bother continuing if the map was actually updated
-    if (!force && (0, _lodashLangIsEqual2['default'])(handlers, prevHandlers) && !this.updateMap()) {
+    var updatedMap = this.updateMap();
+
+    if (!force && (0, _lodashLangIsEqual2['default'])(handlers, prevHandlers) && !updatedMap) {
       return;
     }
+
+    this.updateMap();
 
     var hotKeyMap = this.getMap();
     var sequenceHandlers = [];
